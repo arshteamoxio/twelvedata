@@ -1,0 +1,31 @@
+{
+  "name": "teamoxio/twelvedata",
+  "description": "PHP SDK for twelve data https://twelvedata.com/docs",
+  "keywords": [
+    "twelvedata",
+    "financial data api",
+    "php",
+    "phpsdk",
+    "teamoxio",
+    "sdk"
+  ],
+  "type": "composer-plugin",
+  "license": "",
+  "homepage": "https://github.com/arshteamoxio/twelvedata",
+  "authors": [
+    {
+      "name": "teamOxio",
+      "email": "developers@teamoxio.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.0",
+    "guzzlehttp/guzzle": "^7.4",
+    "ext-json": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "TwelveData\\": "lib/"
+    }
+  }
+}
