@@ -8,9 +8,9 @@ use TwelveData\TwelveData;
  * @property TwelveData $baseObject
 */
 
-class Service extends BaseClass
+abstract class Service extends BaseClass
 {
-    public $baseObject;
+    protected $baseObject;
 
     public function __construct($baseObject)
     {

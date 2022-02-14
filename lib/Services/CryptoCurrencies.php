@@ -4,27 +4,25 @@ namespace TwelveData\Services;
 
 
 use TwelveData\Base\Service;
+use TwelveData\Base\ServiceInterface;
 
-class CryptoCurrencies extends Service
+class CryptoCurrencies extends Service implements ServiceInterface
 {
     /**
      * @return array
      */
     public function all()
     {
-        return $this->baseObject->httpRequest->request('cryptocurrencies');
+        return $this->baseObject->httpRequest->get('cryptocurrencies');
     }
 
     /**
-     * @param string $symbol
+     * @param array $params
      * @return array
      */
-    public function search($symbol)
+    public function search($params = array())
     {
-        $symbol = strtoupper($symbol);
-        return $this->baseObject->httpRequest->request('cryptocurrencies', 'GET', array(
-            'symbol' => $symbol
-        ));
+        return $this->baseObject->httpRequest->get('cryptocurrencies', $params);
     }
 
     /**
@@ -34,7 +32,9 @@ class CryptoCurrencies extends Service
      */
     public function searchPair($token, $currency)
     {
-        return $this->search($token.'/'. $currency);
+        return $this->search(array(
+            'symbol' => $token . '/' . $currency
+        ));
     }
 
 }

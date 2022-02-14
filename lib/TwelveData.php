@@ -4,13 +4,27 @@ namespace TwelveData;
 
 use TwelveData\Base\BaseClass;
 use TwelveData\Base\HttpRequest;
+use TwelveData\Services\Core;
 use TwelveData\Services\CryptoCurrencies;
 use TwelveData\Services\CryptoCurrencyExchanges;
+use TwelveData\Services\Etf;
+use TwelveData\Services\Exchanges;
+use TwelveData\Services\Forex;
+use TwelveData\Services\Indices;
+use TwelveData\Services\Stocks;
+use TwelveData\Services\Symbol;
 
 /**
  *
+ * @property Core $core
  * @property CryptoCurrencyExchanges $cryptoCurrencyExchanges
  * @property CryptoCurrencies $cryptoCurrencies
+ * @property Stocks $stocks
+ * @property Forex $forex
+ * @property Etf $etf
+ * @property Indices $indices
+ * @property Exchanges $exchanges
+ * @property Symbol $symbol
  *
  * @property HttpRequest $httpRequest
  *

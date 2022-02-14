@@ -48,6 +48,26 @@ class HttpRequest extends BaseClass
     }
 
     /**
+     * @param string $path
+     * @param array $params
+     * @return string[]
+     */
+    public function get($path, $params = null)
+    {
+        return $this->request($path, 'GET', $params);
+    }
+
+    /**
+     * @param string $path
+     * @param array $params
+     * @return string[]
+     */
+    public function post($path, $params = null)
+    {
+        return $this->request($path, 'POST', $params);
+    }
+
+    /**
      * @param string $method
      * @param string $path
      * @param array $params

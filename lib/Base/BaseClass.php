@@ -2,7 +2,7 @@
 
 namespace TwelveData\Base;
 
-class BaseClass
+abstract class BaseClass
 {
 
     public static function getClass()

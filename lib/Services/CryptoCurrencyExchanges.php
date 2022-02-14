@@ -4,6 +4,7 @@ namespace TwelveData\Services;
 
 
 use TwelveData\Base\Service;
+use TwelveData\Base\ServiceInterface;
 
 class CryptoCurrencyExchanges extends Service
 {
@@ -12,7 +13,7 @@ class CryptoCurrencyExchanges extends Service
      */
     public function all()
     {
-        return $this->baseObject->httpRequest->request('cryptocurrency_exchanges');
+        return $this->baseObject->httpRequest->get('cryptocurrency_exchanges');
     }
 
 }
